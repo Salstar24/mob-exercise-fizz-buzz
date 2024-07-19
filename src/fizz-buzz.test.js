@@ -1,20 +1,19 @@
 const prod_code = (number) => {
+  let output = '';
 
-  // number = 15
-  if (number % 15 ||)
   if (number % 3 === 0) {
-    return 'Fizz';
+    output = output+'Fizz';
   }
 
   if (number % 5 === 0) {
-    return 'Buzz';
+    output = output+'Buzz';
   }
 
-  if (number % 5 === 0) {
-    return 'Buzz';
+  if (output.length > 0) {
+    return output
   }
 
-  return 'no matches';
+  return number;
 };
 
 describe('Fizz Buzz', () => {
@@ -28,5 +27,9 @@ describe('Fizz Buzz', () => {
 
   it('Returns "FizzBuzz" if the number is divisible by 3 and 5', () => {
     expect(prod_code(15)).toBe('FizzBuzz');
+  });
+
+  it('Returns the number if not divisible by 3 or 5', () => {
+    expect(prod_code(2)).toBe(2);
   });
 });
