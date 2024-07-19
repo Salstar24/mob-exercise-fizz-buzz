@@ -1,4 +1,7 @@
 const prod_code = (number) => {
+
+  // number = 15
+  if (number % 15 ||)
   if (number % 3 === 0) {
     return 'Fizz';
   }
